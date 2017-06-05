@@ -23,7 +23,7 @@ This repository contains two main areas:
 1. The node.js server that calls the internal API's (mocked) and renders this
 data into templates. This code is located in `server/` and is split into the
 routing per pages, the API abstractions, and the expressjs server.
-The only available roots are '/' and /companies/:cityName.
+The only available roots are `/` and `/companies/:cityName`.
 
 2. The client side assets, styles and scripts, and the templates that will be
 rendered by the server. These are located in `client/` and are split into
