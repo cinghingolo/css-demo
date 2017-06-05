@@ -1,0 +1,17 @@
+include ../link/layout
+
+mixin button(data)
+  - var classes = attributes.classes || []
+  - classes.push('button');
+
+  if data.data
+    - Object.keys(data.data).forEach(function(k){attributes['data-'+ k] = data.data[k]})
+
+  if data.minorText
+    +link(data.href)(class=classes)&attributes(attributes)
+      span.button__minor-text= data.minorText
+      span= data.text
+
+  else
+    +link(data.href)(class=classes)&attributes(attributes)= data.text
+

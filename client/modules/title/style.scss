@@ -1,0 +1,12 @@
+.title{
+  position: relative;
+  &:after {
+    position: absolute;
+    left:0;
+    content: " ";
+    border-bottom: 1px solid color(gray-4);
+    width: 2rem;
+    padding:0.125rem;
+    display:block;
+  }
+}

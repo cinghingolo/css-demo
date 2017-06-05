@@ -1,0 +1,7 @@
+mixin button(data, opts)
+  a.button
+    | data.text
+
+
+mixin primary-button(data, opts)
+  +button({text: 'Test'})

@@ -1,0 +1,65 @@
+.footer {
+  background-color: color(gray-2);
+  padding: 1rem 0 4rem;
+  color: color(gray-7);
+
+  a, span {
+    @extend .t-sublegend;
+  }
+
+  h4 {
+    width: 92%;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    a {
+      color: color(gray-7);
+    }
+  }
+
+  .button {
+    padding: 0.5rem 0.75rem;
+  }
+
+  @include breakpoint(tablet){
+    padding: 4rem 0;
+
+    .section--header {
+      &.secondary {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .section-padding {
+      padding-top: 2rem;
+    }
+  }
+
+  // expand last section header to full size to align with .footer-bottom
+  .container .content .l-grid-cell .l-grid-cell:last-of-type .section--header {
+    width:100%;
+  }
+
+}
+
+.footer-bottom {
+  @extend .t-sublegend;
+  background-color: color(light-blue);
+  color: white;
+  margin-top: 1rem;
+
+  .content-footer-bottom {
+    margin-top: 0.75rem;
+    margin-bottom: 2.25rem;
+  }
+
+  a, span {
+    color: color(dark-blue);
+    @extend .t-sublegend;
+
+    &.copyright {
+      color: white;
+    }
+  }
+}

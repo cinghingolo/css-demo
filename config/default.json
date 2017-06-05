@@ -1,0 +1,29 @@
+{
+  "api": {
+    "coreui": "http://mh-web02-s.nzzmg.local:8092/api",
+    "core": "http://mh-web01-s.nzzmg.local:8081/api",
+    "auth": "http://mh-web02-s.nzzmg.local:8093/api",
+    "cms": "https://moneyhouse.mironet.ch"
+  },
+  "apiRequestTimeout": 800,
+  "appSecret": "Ujp18eZkih6NhYIzinoaQ7QtKwc",
+  "port": 3000,
+  "client": {
+    "basePaths" :{
+      "dest": "build"
+    }
+  , "paths": {
+      "styles" : { "src" : "client/styles/", "dest" : "build/css/"}
+    , "scripts" : { "src" : "client/scripts/", "dest" : "build/js/"}
+    , "pages" : { "src":  "client/pages/", "dest": "build/"}
+    , "assets" : { "src":  "assets/", "dest": "build/assets"}
+  }
+  , "appFiles" : {
+      "styles": "client/styles/**/*.scss"
+    }
+  , "appScripts": "client/modules/**/*.js"
+  , "appStyles": "client/modules/**/*.scss"
+  , "allStyles": "client/**/*.scss"
+  , "scriptsRoot": "client/scripts/main.js"
+  }
+}

@@ -1,0 +1,26 @@
+.error-page {
+  min-height:40rem;
+  height:100vh;
+
+  .message {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 90%;
+    @include breakpoint(mobile) {
+      top: 30%;
+    }
+  }
+
+  footer {
+    position:absolute;
+    text-align: center;
+    width:100%;
+    bottom: 2rem;
+  }
+}
+
+.error-links {
+  @extend .home-nav-links;
+}

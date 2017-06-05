@@ -1,0 +1,41 @@
+.dropdown {
+  @extend .l-grid-cell;
+  background-image: url(../../../assets/images/select-arrow-gray.svg);
+  background-repeat:no-repeat;
+  background-position:right 1rem;
+  padding: 0.5rem 1.75rem 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown-options {
+  border: 1px solid color(gray-3);
+  background-color: #FFF;
+  z-index: 10001;
+  position: absolute;
+  text-align: left;
+  min-width: 50px;
+  li, li a {
+    color: black;
+    font-size: 0.875rem;
+  }
+  li {
+    padding: 0;
+    cursor: pointer;
+    a {
+      display: block;
+      padding: 0.5rem;
+    }
+    .t-sublegend {
+      color: color(gray-5);
+    }
+    &.disabled {
+      cursor: not-allowed;
+      &:hover {
+        background-color: #FFF;
+      }
+    }
+    &:hover {
+      @extend .c-bg-extra-light-blue-20p;
+    }
+  }
+}

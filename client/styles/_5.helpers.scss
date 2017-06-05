@@ -1,0 +1,77 @@
+/* 
+ * Opinionated tooltip with tail.
+ *
+ *  Size: distance between tooltip and end of tail.
+ *
+ */
+@mixin tooltip($size, $horizontal: 'left', $vertical: 'bottom') {
+  $tail: $size * 1.41; // sqrt(2)
+
+  @extend %shadow;
+  padding: $size;
+  background-color: white;
+  position: relative;
+  margin-bottom: $size;
+
+  &:before {
+    // Shadow
+    @extend %shadow;
+    content: " ";
+    width: $tail;
+    height: $tail;
+    background-color: white;
+    display: block;
+    position:absolute;
+
+    @if $vertical== 'bottom' {
+      bottom: -0.5 * $tail;
+    } @else {
+      top: -0.5 * $tail;
+      bottom: auto;
+    }
+    @if $horizontal== 'left' {
+      left: $tail;
+      right: auto;
+    } @else {
+      left: auto;
+      right: $tail;
+    }
+    transform: rotateZ(45deg);
+    -ms-transform: rotate(45deg);
+  }
+  
+  &:after {
+     // Kill Shadow
+    content: " ";
+    width: 100%;
+    height: $tail * 1.1; // Add space for shadow;
+    background-color: white;
+    display: block;
+    position:absolute;
+    @if $vertical== 'bottom' {
+      bottom:0;
+    } @else {
+      top:0;
+    }
+    left: 0;
+  }
+}
+
+
+
+.error-popup {
+  position:fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin:0 auto;
+  padding: 3rem;
+
+  z-index: 999;
+  background: white;
+  border: 1rem solid color(red);
+  font-size: 2rem;
+  box-shadow: 0 0 10000px 10000px rgba(0, 0, 0, 0.6);
+}
+
+

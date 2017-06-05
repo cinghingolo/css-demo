@@ -1,0 +1,51 @@
+include ../button/layout
+include ../button--register/layout
+include ../link/layout
+include ../login/layout
+include ../dropdown/layout
+
+
+mixin header-account()
+  nav.header
+    +header-mobile()
+
+    .top-nav.is-hidden-mobile
+      .container
+        .content
+          .l-grid-cell
+            +link('/').header__logo
+              img(src="/assets/images/css-logo@2x.png").header__logo__img
+          .l-grid-cell.header__account__nav
+
+            if user.isGuest()
+              +login-link().top-nav-item
+
+            else
+              +dropdown(user.getName())#user-dropdown.top-nav-item
+                li
+                  +link()&attributes({external: true})=__('Mein Konto')
+                    p.t-sublegend= __('Kunden-Nr') + ': ' + user.id
+                li: +logout-link()
+
+            +link().top-nav-item.gray=__('Hilfe')
+
+            +dropdown(getLocale().toUpperCase()).top-nav-item.last#language-dropdown
+              li: +link().js-select-language(data-path=unlocalizedPath, data-lang='de') Deutsch
+              li: +link().js-select-language(data-path=unlocalizedPath, data-lang='fr') Français
+              li: +link().js-select-language(data-path=unlocalizedPath, data-lang='it') Italiano
+              li: +link().js-select-language(data-path=unlocalizedPath, data-lang='en') English
+
+
+mixin header-mobile()
+  .narrow-nav
+    +link('/').logo-container
+      img(src="/assets/images/css-logo@2x.png").narrow-nav-logo
+    +link().menu-container
+      span.menu.icon.icon-menu_grey Menu
+
+mixin search-menu-items(menuItems)
+  each menuItem in menuItems
+    if (urlObj.pathname == '/' + getLocale() + menuItem.url)
+      +link(menuItem.url)&attributes({'target': menuItem.target}).active !{__(menuItem.title)}
+    else
+      +link(menuItem.url)&attributes({'target': menuItem.target}) !{__(menuItem.title)}

@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+include ../modules/header/layout
+include ../modules/footer/layout
+
+block meta
+  title=person.getFullName() + ' - ' + person.getCity()
+  meta(name='description', content=__('Wohnort, Heimatort, Bonitätsprüfung, Mandate, Beteiligungen, Netzwerk, Funktion und Firma von %s in %s', person.getSeoName(), person.getSeoCity()))
+
+block meta-robots
+    meta(name='robots', content='noindex, follow')
+
+block body
+
+  .container
+    .content
+      article.page
+        block personContent
+  +footer()
+

@@ -1,0 +1,41 @@
+include ../button/layout
+include ../button--register/layout
+include ../login/layout
+include ../modal/layout
+
+
+mixin register-trigger(user, title, text, refKey)
+  - title = title || __('Jetzt anmelden oder registrieren')
+  - text = text || __('Unbeschränkter Zugriff auf diese Inhalte')
+  +paywall-content(user, title, text)
+    if user.isGuest()
+      +button--register(user, {text: __('Jetzt kostenlos registrieren'), refKey: refKey})
+      +login-link().button.button--secondary.button--margin
+
+mixin paywall-content(user, title, text)
+  .section.section--paywall
+    h2=title
+    .section
+      span !{text}
+    .section
+      block
+
+mixin register-trigger-button(user, text, refkey)
+  - text = text || __('Exklusiv für registrierte Mitglieder')
+  - attributes = attributes || {}
+  if refkey
+    - attributes['data-ref'] = refkey
+  +trigger-button(text)&attributes(attributes)&attributes({'data-modal-id': 'login-modal'}).js-trigger-modal(class=attributes.class)
+
+mixin trigger-button(text, href)
+  +button({text: text, href: href})&attributes(attributes).button--secondary.unlock(class=attributes.class)
+
+
+mixin paywall-prompt-customers(user, companiesCount)
+  +paywall-prompt-companies(user, companiesCount, 'companies-list')
+
+mixin paywall-prompt-companies(user, companiesCount, refKey)
+  if user.isGuest()
+    - var title =__('Jetzt alle %s Unternehmen ansehen', companiesCount)
+    - var text = __('Inhalte nur für registrierte Users verfügbar')
+    +register-trigger(user, title, text, refKey)

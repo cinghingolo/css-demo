@@ -1,0 +1,54 @@
+.section--header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid color(gray-4);
+}
+
+.section--highlight {
+  background-color: color(gray-2);
+  padding: 2rem;
+}
+
+.section--no-height {
+  display: block;
+  margin-top: -2rem;
+}
+
+.section--paywall {
+  background-color: color(blue-black);
+  color: white;
+  padding: 2rem;
+
+}
+
+.section--paywall, .section--highlight {
+  @include breakpoint(mobile){
+    padding: 1.5rem;
+    .button {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.section--credit-report-menu {
+  margin-top: 2.5rem;
+}
+
+.section {
+  .text-highlight {
+    background-color: color(gray-3);
+    padding: 0.125rem;
+    margin-left: 1rem;
+  }
+}
+
+.sub-section {
+  padding: 0.375rem 0;
+}
+
+.section--source {
+  .source {
+    position: relative;
+    bottom: 1.25rem;
+  }
+}

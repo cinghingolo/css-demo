@@ -1,0 +1,6 @@
+mixin link(href)
+  - var url = createUrl(href)
+  - var attributes = attributes ||{}
+
+  a(href!=url)&attributes(attributes)
+    block

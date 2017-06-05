@@ -1,0 +1,75 @@
+.entity-filters select {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.entity-filters .entity-search {
+  width:15rem;
+}
+
+@include breakpoint(tablet){
+  .entity-table .entity-name {
+    display: block;
+    white-space: normal;
+    min-width:9rem;
+  }
+
+  .entity-filters .radiogroup{
+    display: block;
+    width: 100%;
+
+    & label {
+      width: 100%;
+    }
+  }
+
+  .entity-filters .entity-search {
+    width: 100%;
+  }
+}
+
+.pagination--button {
+  margin-right: 0.65rem;
+  padding: 0.5rem 0.7rem;
+  min-width: 1.25rem;
+}
+
+.pagination--arrow {
+  min-width: unset;
+  .icon-chevron_outline, .icon-double_chevron_outline {
+    position: relative;
+    top: 0.1rem;
+    &.rotate {
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+    }
+  }
+  .icon-double_chevron_outline {
+    left: 0.05rem;
+  }
+  &.button--secondary {
+    &.button--disabled {
+      background: white;
+      opacity: 0.5;
+    }
+  }
+}
+
+.pagination {
+  a:last-of-type {
+    margin-right: 0;
+  }
+}
+
+td {
+  &.company-info {
+    min-width: 100px;
+  }
+  &.hr-date {
+    min-width: 80px;
+  }
+  &.showMore {
+    div {
+      display: none;
+    }
+  }
+}

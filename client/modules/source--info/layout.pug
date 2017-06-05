@@ -1,0 +1,8 @@
+mixin source-info-right(title)
+  .l-f-right.is-hidden-mobile
+    +source-info(title)
+
+
+mixin source-info(title)
+  span.source.minor=__('Quelle') + ': '
+    +link('/datasources')(target='_blank').t-sublegend=title

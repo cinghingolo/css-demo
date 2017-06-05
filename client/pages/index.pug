@@ -1,0 +1,40 @@
+extends ../layouts/default
+
+include ../modules/link/layout
+include ../modules/button/layout
+include ../modules/button--register/layout
+include ../modules/card/layout
+include ../modules/header/layout
+include ../modules/footer/layout
+include ../modules/login/layout
+
+block meta-robots
+  meta(name='robots', content='noindex, nofollow')
+
+block body-header
+  +header-account()
+
+block body
+  .full-width-image
+    .homepage-section.container
+      .content
+
+        h1=__('CSS Versicherung')
+        .section--content
+          p=__('Ihre ganz persönliche Versicherung')
+
+  .homepage-section.c-bg-white
+    .container.section
+      .content
+        .l-grid
+          .l-grid-cell.l-one-whole
+            .card.index-list.shadow--static.fixed-height-28
+              h3=__('Firmenverzeichnis')
+              .section--small
+                p=__('Hier finden Sie unsere Kundenfirmen in den grössten Schweizer Städten.')
+              .l-grid
+                .l-grid-cell.l-one-half.l-mobile-one-whole
+                  ul.section--small
+                    for city in REGIONALCITIES
+                      li: +link('/companies/' + city.uri)= __(city.region)
+  +footer()

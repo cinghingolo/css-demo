@@ -1,0 +1,23 @@
+$s-content-width: 994px;
+$s-sidebar-width: 300px;
+$s-gutter: 24px;
+$s-mobile-gutter: 12px;
+$s-container-width: $s-content-width + $s-sidebar-width + (3 * $s-gutter);
+
+$base-unit: 1rem;
+
+$breakpoints: (
+    "mobile"               : "only screen and (max-width:720px)",
+    "mobile-portrait"      : "only screen and (max-width:425px)",
+    "mobile-landscape"     : "only screen and (min-width:426px) and (max-height: 425px)",
+    "tablet"               : "only screen and (max-width:" + ($s-content-width + 2*$s-gutter) + ")",
+    "only-tablet"          : "only screen and (min-width:820px) and (max-width:" + ($s-content-width + 2*$s-gutter) + ")",
+    "desktop"              : "only screen and (min-width:" + ($s-content-width + 2*$s-gutter + 1) + ")",
+    "no-sidebar"           : "only screen and (max-width: 1149px)",
+    "with-sidebar"         : "only screen and (min-width: 1149px)",
+    "no-full-sidebar"      : "only screen and (max-width: 1366px)",
+    "fireplace-ad"         : "only screen and (max-width: 1350px)",
+    "super-wide"           : "only screen and (min-width: 1920px)",
+    "print"                : "print"
+);
+

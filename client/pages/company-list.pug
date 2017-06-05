@@ -1,0 +1,37 @@
+extends ../layouts/companies
+
+include ../modules/table/layout
+include ../modules/table--entities/layout
+include ../modules/trigger/layout
+include ../partials/entity-table
+
+block meta
+  title=__('Liste Unternhemen in') + ' ' + capitalize(cityName)
+  meta(name='description', content=__('Liste Unternehemen in') + ' ' + capitalize(cityName))
+
+block personContent
+
+  .section.section--header.section--source
+    h2=__('Liste Unternhemen in') + ' ' + capitalize(cityName)
+
+  if (activeResults || totalResults)
+    .section--main
+      +tableFilters()
+        +customerStatusFilter(companies, activeResults, totalResults, activeOnly)
+        //-if contracts //TBD ADDITIONAL FILTER FOT CONTRACT TYPE
+          +customerContractFilter(contracts, selectedContractType)
+
+    .section.responsive-table
+      +entity-table(companies)
+
+    .section
+      +tablePagination(activeResults, totalResults)
+
+    if showPaywall
+      .section
+        +paywall-prompt-customers(user, totalResults)
+
+  else
+    .section--main
+      .card
+        h2 Keine Unternehmen verfügbar

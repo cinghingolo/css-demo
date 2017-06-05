@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>magnifying_glass_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="magnifying_glass_white" sketch:type="MSArtboardGroup">
+            <g id="magnifying_glass_grey" sketch:type="MSLayerGroup" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) ">
+                <g id="magnifying-glass" sketch:type="MSShapeGroup">
+                    <g id="Page-1">
+                        <g id="magnifying-glass">
+                            <path d="M16,14 L16,14 C19.3137085,14 22,11.3137085 22,8 C22,4.6862915 19.3137085,2 16,2 C12.6862915,2 10,4.6862915 10,8 C10,11.3137085 12.6862915,14 16,14 L16,14 L16,14 Z M16,16 L16,16 C11.581722,16 8,12.418278 8,8 C8,3.581722 11.581722,0 16,0 C20.418278,0 24,3.581722 24,8 C24,12.418278 20.418278,16 16,16 L16,16 L16,16 Z" id="Shape" fill="#FFFFFF"></path>
+                            <path d="M11.7071068,13.7071068 C12.0976311,13.3165825 12.0976311,12.6834175 11.7071068,12.2928932 C11.3165825,11.9023689 10.6834175,11.9023689 10.2928932,12.2928932 L0.292893219,22.2928932 C-0.0976310729,22.6834175 -0.0976310729,23.3165825 0.292893219,23.7071068 C0.683417511,24.0976311 1.31658249,24.0976311 1.70710678,23.7071068 L11.7071068,13.7071068 L11.7071068,13.7071068 Z" id="Shape" fill="#FFFFFF"></path>
+                            <rect id="Rectangle-10-Copy-2" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

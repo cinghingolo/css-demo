@@ -1,0 +1,22 @@
+include ./layout
+
+mixin styleguide-dropdown()
+  div#dropdown.section
+  h2.styleguide-title Custom Dropdown
+  .container
+    .l-grid-cell.l-one-whole
+      p Custom Dropdown are similar to standard HTML select components, with a bit more of style and additional
+        | content type possibilities. Once the header is clicked, the options are shown. Only one dropdown can be active:
+        | if another one is clicked, the prevoius one will be inactivated.
+    .l-grid-cell.l-one-half.section--small
+      +dropdown('John Smith')#dropdown_1.l-f-left
+        li: +link() Option 1 Test
+        li: +link() Option 2 Test
+        li: +link() Option 3 Test
+    .l-grid-cell.l-one-half.section--small
+      +dropdown('DE')#dropdown_2.l-f-left
+        li: +link() Deutsch
+        li: +link() Français
+        li: +link() Italiano
+        li: +link() English
+        li: +link() Schwyzerdütsch

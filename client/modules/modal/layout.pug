@@ -1,0 +1,10 @@
+mixin modal(id, data)
+  - modalContents = modalContents || []
+  - modalContents.push({id: id, block: block, data:data, closeable: true, attributes: attributes})
+
+
+mixin modal-target(p)
+  div(id=p.id)&attributes(p.attributes).modal
+    if p.closeable
+      .modal-close +
+    - if (typeof p.block == 'function') {p.block()}

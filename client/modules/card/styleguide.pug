@@ -1,0 +1,42 @@
+include ./layout
+
+mixin styleguide-card()
+  div#card.section
+    h2.styleguide-title.wip Card
+    
+    .l-grid
+      .l-grid-cell.l-one-third.l-mobile-one-whole
+        .card
+          h4 +41 41 511 07 00
+          .section--content
+            p.sublegend Fragen Beratung und Hilfe
+            p.sublegend Montag bis Freitag
+            p.sublegend 08.00 &mdash; 12.00, 13.00 &mdash; 17.00 Uhr
+            p.sublegend
+              a(href='mailto:info@moneyhouse.ch') info@moneyhouse.ch
+        
+
+
+    .section
+      .card.dismissable.shadow--static
+        a(href="javascript:void(0)").dismiss-card close
+        h4 Seit Ihrem letzen Besuch had sich die Bonität verändert
+        p Dies geht aus einer Analyse von 2 Rechnungen hervor. Die Veränderung kann sowohl positiv als auch negativ sein.
+        .section--content
+          +button({text: "Mehr erfahren"})
+
+
+
+
+    .section
+      h2.styleguide-title Card--image
+      .l-grid
+
+        +card--image({image: 'smartinfo', title: 'Netzwerk', icon: 'product_network_white'})
+          p In der Bonitätsauskunft erfahren Sie ob Zahlungs-störungen vorliegen, z.B. Mahnungen, Betreibungen, etc.
+
+        +card--image({image: 'konkurrenzanalyse', title: 'Konkursanalyse', icon: 'product_bankruptcy_list_white'})
+          p in der bonitätsauskunft erfahren sie ob zahlungs-störungen vorliegen, z.b. mahnungen, betreibungen, etc.
+
+        +card--image({image: 'monitoring', title: 'Monitoring', icon: 'product_monitoring_white'})
+          p in der bonitätsauskunft erfahren sie ob zahlungs-störungen vorliegen, z.b. mahnungen, betreibungen, etc.

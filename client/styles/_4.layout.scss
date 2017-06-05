@@ -1,0 +1,154 @@
+
+// Full width Section
+.page {
+
+}
+
+// Container Column
+.container {
+  max-width: $s-container-width;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+}
+
+// Content column
+.content {
+  @extend .l-grid-cell;
+  width:100%;
+  max-width: $s-content-width + (2* $s-gutter);
+  padding: 0 $s-gutter;
+  //overflow: hidden;
+
+  &.no-padding-right {
+    padding-right: 0;
+  }
+}
+
+
+// Sidebar column
+.sidebar {
+  @extend .l-grid-cell;
+  max-width: $s-sidebar-width;
+  margin-right: $s-gutter;
+  margin-top: 1.5rem;
+  overflow: hidden;
+
+  // Display filterbox only in the full sidebar column
+  @include breakpoint(no-full-sidebar){
+    .filterbox {
+      display:none;
+    }
+  }
+}
+
+// Define the grid
+@include sensibleGrid (
+    $modern: false,
+    $gutter: 24px, 
+    $gutterType: margin,
+    $base-font-size: 1rem,
+    $slug: "l-",
+    $pushClasses: true,
+    $gridWidths: (
+        "one-whole"         : 100%,
+        "one-half"          : 50%,
+        "one-quarter"       : 25%,
+        "three-quarters"    : 75%,
+        "one-third"         : 33.333%,
+        "two-thirds"        : 66.666%,
+        "one-fifth"         : 20%,
+        "two-fifths"        : 40%,
+        "three-fifths"      : 60%,
+        "four-fifths"       : 80%,
+        "one-sixth"         : 16.666%,
+        "five-sixths"       : 83.333%
+    ),
+    $gridBreakpoints: "desktop" "tablet" "mobile"
+);
+
+@include responsive-visibility("mobile" "tablet" "desktop" , true);
+
+
+// Setup Spacings
+.section {
+  margin-top: 1.5rem;
+}
+.section--content.section--content { // Make more specific than input[type=]
+  margin-top: 1rem;
+}
+
+.section--large {
+  margin-top: 2rem;
+}
+
+.section--main {
+  margin-top: 3rem;
+}
+
+.section--huge {
+  margin-top: 4rem;
+}
+
+.section--small {
+  margin-top: 0.5rem;
+}
+
+
+.l-f-left {
+  float:left;
+}
+.l-f-right {
+  float:right;
+}
+
+.l-f-contain:after{
+  content: "";
+  display:block;
+  clear:both;
+}
+.l-f-clear {
+  clear:both;
+}
+
+.link-list a{
+  display: inline-block;
+  width: 1.75rem;
+  height: 2rem;
+}
+
+.l-grid {
+  .l-grid-cell {
+    &.no-margin {
+      margin: 0;
+    }
+  }
+}
+
+.center-block {
+  display: table;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+
+.l-grid.v-center .l-grid-cell {
+  vertical-align: middle;
+}
+
+.width-abs-100 {
+  width: 100px;
+}
+
+
+.width-abs-150 {
+  width: 150px;
+}
+
+.width-abs-200 {
+  width: 200px;
+}

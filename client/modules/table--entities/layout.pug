@@ -1,0 +1,116 @@
+include ../link/layout
+include ../table/layout
+include ../entity--icon/layout
+include ../relation-helper/layout
+include ../table/layout
+
+mixin entityTable(relations)
+  +responsive-table().entity-table
+    thead
+      tr
+        th(colspan=2)=__('Name')
+        th=__('Versicherungstyp')
+        th=__('Seit')
+        th=__('Bis')
+
+    for relation in relations
+      +entityTableRow(relation)
+    if relations.length == 0
+      +emptyRow(__('Keine Ergebnisse'))
+
+mixin emptyEntityTable(relations)
+  +responsive-table().entity-table
+
+mixin entityTableRow(relation)
+  //- sanity check: assume default name from relation issuer
+  - nameFrom = nameFrom || 'issuer'
+
+  tbody.person
+    each role, i in relation.roles
+      tr
+        //- first role is different (two columns, not one) because it shows icon & name
+        if (i==0)
+          td
+            //- RelationType_0=Company-Person, RelationType_1=Company-Company
+            if relation.relationType.key == 'RelationType_1' || relation.relationType.key == 'RelationType_0' && nameFrom == 'issuer'
+              //- show company logo if the relation is between two companies OR if the relation is between a company and a person and the issuer is shown (=mandate)
+              +company--icon(relation[nameFrom], {inline: true})
+            else
+              +person--icon(relation[nameFrom], {inline: true})
+          td
+            +link().entity-name=relation[nameFrom].name
+        else
+          td(colspan=2)
+
+        td
+          +render-roleContractGroup(role)
+
+        td.alt
+          .no-wrap=moment(role.from).format('L')
+
+        td.alt
+          if role.to
+            .no-wrap= moment(role.to).format('L')
+          else
+            .icon-green-dot
+
+mixin entity-table-cell-hideable(showMore)
+  - var classes = [].concat(attributes.class)
+  - if (showMore) classes.push('showMore')
+  td(class=classes)
+    block
+
+mixin customerStatusFilter(mandates, activeMandates, totalMandates, activeOnlySelected)
+  +tableStatusFilter(activeMandates, totalMandates, activeOnlySelected).js-mandate-status-filter
+
+
+mixin customerPositionFilter(positions, selectedPosition)
+  +tableDropdownFilter(positions, selectedPosition).js-mandate-position-filter
+
+mixin personNetworkTable(network, positions)
+  +responsive-table().person-network-table
+    thead
+      tr
+        th(colspan=2)=__('Name')
+        th=__('Verbindung über')
+        th=__n('%s Funktion', 1)
+        th=__('Seit')
+        th=__('Bis')
+
+    for connection in network
+      +personNetworkTableRow(connection, positions)
+
+
+mixin personNetworkTableRow(connection, positions)
+  - var person = 0
+  tbody.connection
+    for company in connection.throughCompany
+      tr
+        td
+          if person == 0
+            if (connection.toPerson.status)
+              .med-inline-icon.icon--mid.icon-person_active
+            else
+              .med-inline-icon.icon--mid.icon-person_inactive
+        td
+          +link(connection.toPerson.href).entity-name=connection.toPerson.name
+          - person ++
+        td
+          .no-wrap= company.name
+        td
+          .no-wrap
+            +render-roleFunction(company.role)
+
+        td.alt
+          .no-wrap= moment(company.role.from).format('L')
+        td.alt
+          if company.role.to
+            .no-wrap= moment(company.role.to).format('L')
+          else
+            .icon-green-dot
+
+
+mixin render-roleContractGroup(roleGroup)
+  each role in roleGroup.contracts
+    +render-roleContract(role)
+  //-+render-roleSignature(roleGroup)

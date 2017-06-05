@@ -1,0 +1,17 @@
+{
+  "id": 8963,
+  "username": "zrtfinanz@bluewin.ch",
+  "email": "zrtfinanz@bluewin.ch",
+  "gender": "m",
+  "name": "Herbert Strittmatter",
+  "firstName": "Herbert",
+  "lastName": "Strittmatter",
+  "language": null,
+  "phpAutologinTokenRaw": "ab72502890542b9325292dc7535aa245860cb7dccbc7655",
+  "admin": false,
+  "premium": false,
+  "disabled": true,
+  "disabledReason": "invalid userdata (plz)",
+  "token": "",
+  "phpAutologinToken": "7b71b423fb2a768b52093ae0e860cb7f5809bb078cedbdbc3648a08d"
+}

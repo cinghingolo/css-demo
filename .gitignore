@@ -1,0 +1,12 @@
+node_modules
+build
+/nbproject/private/
+npm-debug.log
+.idea/
+.DS_Store
+run.pid
+/test/reports/
+.version
+server/webpack-assets.json
+server/rev-manifest.json
+/nbproject/

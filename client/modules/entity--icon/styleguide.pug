@@ -1,0 +1,47 @@
+include ./layout
+
+mixin styleguide-entity-icons()
+  - var companyStatusActive = {code: 1, key: 'OrganisationSituation_1'}
+  - var companyStatusInactive = {code: 5, key: 'OrganisationSituation_5'}
+  - var companyStatusLiquidation = {code: 3, key: 'OrganisationSituation_3'}
+  h2.styleguide-title Entity Status Icons
+  table
+    thead
+      tr
+        td
+        td Company
+        td Person
+    tbody
+      tr
+        td Active
+        td
+          .section normal:
+            +company--icon({statusCode: companyStatusActive})
+          .section inline:
+            +company--icon({statusCode: companyStatusActive}, {inline: true})
+        td
+          .section normal:
+            +person--icon({activeMandates: true})
+          .section inline:
+            +person--icon({activeMandates: true}, {inline: true})
+      tr
+        td Inactive
+        td
+          .section normal:
+            +company--icon({statusCode: companyStatusInactive})
+          .section inline:
+            +company--icon({statusCode: companyStatusInactive}, {inline: true})
+        td
+          .section normal:
+            +person--icon({activeMandates: false})
+          .section inline:
+            +person--icon({activeMandates: false}, {inline: true})
+    tr
+        td In Liquidation
+        td
+          .section normal:
+            +company--icon({statusCode: companyStatusLiquidation})
+          .section inline:
+            +company--icon({statusCode: companyStatusLiquidation}, {inline: true})
+        td
+          p does not exist

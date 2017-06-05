@@ -1,0 +1,105 @@
+
+.icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  // Defaults: Match text size
+  width: 1em;
+  height: 1em;
+}
+
+.med-inline-icon {
+  font-size:1.5rem;
+}
+
+.small-icon{
+  font-size: 1rem;
+}
+
+.med-icon {
+  font-size:1.5rem;
+}
+.big-icon {
+  font-size:3rem;
+}
+.huge-icon {
+  font-size:4rem;
+}
+
+.icon--mid {
+  vertical-align:middle;
+}
+
+.small-icon-before {
+  // Container will have a big icon before the contents.
+  padding-left: 2rem;
+  position:relative;
+  .small-icon {
+    position:absolute;
+    left:0;
+  }
+}
+
+.big-icon-before {
+  // Container will have a big icon before the contents.
+  padding-left: 4rem;
+  position:relative;
+  .big-icon {
+    position:absolute;
+    left:0;
+  }
+}
+
+.med-icon-before {
+  // Container will have a big icon before the contents.
+  padding-left: 2.5rem;
+  position:relative;
+  .med-icon {
+    position:absolute;
+    left:0;
+  }
+  @include breakpoint(mobile) {
+    padding-left: 1rem;
+  }
+}
+
+
+$icons: "chevron_outline","chevron_left_white","chevron_right_white","close","close_grey","company_active","company_inactive","company_liquidation","double_chevron_outline","facebook","google_plus","info_blue","info_grey","linkarrow_blue","linkedIn","lock_grey","magnifying_glass_black_small","magnifying_glass_grey","magnifying_glass_white","magnifying_glass_white_small","menu_grey","network_grey","person_active","person_inactive","signet_twitter","tick","twitter","xing";
+
+// Assets will be inlined with Data URI here later.
+@for $i from 1 through length($icons) {
+  .icon-#{nth($icons, $i)} {
+    @extend .icon;
+    background-image: url("/assets/icons/#{nth($icons, $i)}.svg");
+  }
+}
+
+
+.bg-im-homepage-picture { background-image: url("/assets/images/homepage-picture.png"); }
+
+// Company Status modifier for company canton lists
+.icon-status {
+  float: left;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.icon-green-dot {
+  @extend .icon;
+  background-color: color(green);
+  font-size: 0.7rem;
+  border-radius: 1em;
+}
+
+.icon-red-dot {
+  @extend .icon;
+  background-color: color(red);
+  font-size: 0.7rem;
+  border-radius: 1em;
+}

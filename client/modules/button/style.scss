@@ -1,0 +1,118 @@
+.button {
+  cursor:pointer;
+  display: inline-block;
+  text-align:center;
+
+  // Use on actual buttons
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  border:none;
+
+  // Default is big blue primary
+  color: white;
+  background-color: color(light-blue);
+  &:hover {
+    background-color: color(blue); 
+    color: white;
+  }
+  &:active { background-color: color(dark-blue); }
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border-bottom: 2px solid color(dark-blue);
+
+
+  &.button--disabled {
+    opacity: 0.8;
+    cursor:not-allowed;
+    &:hover {
+      color: white;
+      background-color: color(light-blue);
+    }
+  }
+
+}
+
+.button--stretch {
+  display: block;
+}
+
+.button--stretch-tablet {
+  @include breakpoint(tablet){
+    display: block;
+  }
+}
+
+.button--stretch-mobile {
+  @include breakpoint(mobile){
+    display: block;
+  }
+}
+
+
+.button--secondary {
+  background-color: transparent;
+  color: color(light-blue);
+  border: 1px solid color(light-blue);
+  &:hover {
+    background-color: transparent;
+    color: color(blue);
+    border-color: color(blue);
+  }
+  &:active {
+    background-color: transparent; 
+    color: color(dark-blue);
+    border-color: color(dark-blue);
+  }
+}
+
+.button--orange {
+  background-color: color(light-red);
+  &:hover { background-color: color(red); }
+  &:active { background-color: color(dark-red); }
+  border-bottom: 2px solid color(dark-red);
+  &.button--disabled {
+    &:hover {
+      background-color: color(light-red);
+    }
+  }
+}
+
+.button--orange.button--secondary {
+  background-color: transparent;
+  color: color(light-red);
+  border: 1px solid color(light-red);
+  &:hover {
+    background-color: transparent;
+    color: color(red);
+    border-color: color(red);
+  }
+  &.button--disabled {
+    &:hover {
+      border-color: color(light-red);
+      color: color(light-red);
+    }
+  }
+  &:active {
+    background-color: transparent;
+    color: color(dark-red);
+    border-color: color(dark-red);
+  }
+}
+
+.button--small {
+  @extend .t-sublegend;
+}
+.button__minor-text {
+  display:block;
+  @extend .t-footnote;
+}
+
+.button--margin {
+  margin-left: 10px;
+
+  @include breakpoint(mobile){
+    margin-left: 0;
+  }
+}
+

@@ -1,0 +1,918 @@
+{
+  "metaInfo": {
+    "count": 30,
+    "totalCount": 30,
+    "metaData": {
+      "relationStatistics": {
+        "activeTotal":25,
+        "total": 30,
+        "activeBoards": {},
+        "activeSignatories": {},
+        "boards": {},
+        "signatories": {}
+      }
+    }
+  },
+  "source": [
+    {
+      "aggregateId": "b350a3eb-74ed-4609-b26a-9fcd1c48f081",
+      "issuer": {
+        "aggregateId": "f4e5466e-6d88-4fae-bfa9-793d4a1dab50",
+        "uri": "ing-baring-private-bank-schweiz-ag-2881163701",
+        "name": "ING Baring Private Bank (Schweiz) AG",
+        "statusCode": {
+          "code": 1,
+          "key": "OrganisationSituation_1"
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 4004
+              }
+            }
+          ],
+          "from": "2000-01-15",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "2e7f007f-1207-4452-9934-49aaa5446343",
+      "issuer": {
+        "aggregateId": "d23047ef-86e9-4c72-a1a3-f37aeb8e97ce",
+        "uri": "sigma-aldrich-production-gmbh-112554011",
+        "name": "Sigma-Aldrich Production GmbH, Zweigniederlassung Basel",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_2",
+                "code": 2010
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-polara-12889293941",
+        "name": "Société Immobilière Polara in Liquidation",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "e95767b8-9607-4a17-8948-03a969e7d1e4",
+      "issuer": {
+        "aggregateId": "3f012d26-ed9f-45ac-8354-e552a37e426f",
+        "uri": "coeclerici-commodities-sa-11421255591",
+        "name": "COECLERICI COMMODITIES SA",
+        "statusCode": {
+          "key": "OrganisationSituation_5",
+          "code": 5
+        }
+      },
+      "relationType": {
+        "key": "RelationType_1",
+        "code": 0
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_3",
+                "code": 2012
+              }
+            }
+          ],
+          "from": "2011-11-15",
+          "to": "2013-12-20"
+        }
+      ]
+    },
+    {
+      "aggregateId": "0ba73fae-0dbd-4995-9540-59ed4e6b84d1",
+      "issuer": {
+        "aggregateId": "016c7e04-d035-4643-b6e2-3e7b0916cff0",
+        "uri": "diveco-holding-ag-11419430891",
+        "name": "Diveco Holding AG in Liquidation",
+        "statusCode": {
+          "key": "OrganisationSituation_5",
+          "code": 5
+        }
+      },
+      "relationType": {
+        "key": "RelationType_1",
+        "code": 0
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_2",
+                "code": 2010
+              }
+            }
+          ],
+          "from": "2010-10-07",
+          "to": "2011-08-11"
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-5-12889293941",
+        "name": "Société Immobilière 5",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-6-12889293941",
+        "name": "Société Immobilière 6",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-7-12889293941",
+        "name": "Société Immobilière 7",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-8-12889293941",
+        "name": "Société Immobilière 8",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-9-12889293941",
+        "name": "Société Immobilière 9",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-10-12889293941",
+        "name": "Société Immobilière 10",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-11-12889293941",
+        "name": "Société Immobilière 11",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-12-12889293941",
+        "name": "Société Immobilière 12",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-13-12889293941",
+        "name": "Société Immobilière 13",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-14-12889293941",
+        "name": "Société Immobilière 14",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-15-12889293941",
+        "name": "Société Immobilière 15",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2001-03-31",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-16-12889293941",
+        "name": "Société Immobilière 16",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-16",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-17-12889293941",
+        "name": "Société Immobilière 17",
+        "statusCode": {
+          "key": "OrganisationSituation_5",
+          "code": 5
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-17",
+          "to": "2017-02-17"
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-18-12889293941",
+        "name": "Société Immobilière 18",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-18",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-19-12889293941",
+        "name": "Société Immobilière 19",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-19",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-20-12889293941",
+        "name": "Société Immobilière 20",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-20",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-21-12889293941",
+        "name": "Société Immobilière 21",
+        "statusCode": {
+          "key": "OrganisationSituation_5",
+          "code": 5
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-21",
+          "to": "2017-05-11"
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-22-12889293941",
+        "name": "Société Immobilière 22",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-22",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-23-12889293941",
+        "name": "Société Immobilière 23",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-23",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-24-12889293941",
+        "name": "Société Immobilière 24",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-24",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-25-12889293941",
+        "name": "Société Immobilière 25",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-25",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-26-12889293941",
+        "name": "Société Immobilière 26",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-26",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-27-12889293941",
+        "name": "Société Immobilière 27",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-27",
+          "to": null
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-28-12889293941",
+        "name": "Société Immobilière 28",
+        "statusCode": {
+          "key": "OrganisationSituation_5",
+          "code": 5
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-28",
+          "to": "2017-01-29"
+        }
+      ]
+    },
+    {
+      "aggregateId": "93bfc204-10d9-443b-b78f-062169428312",
+      "issuer": {
+        "aggregateId": "2b38f3f6-ce72-48c4-806c-c81c7b22e9d8",
+        "uri": "societe-immobiliere-29-12889293941",
+        "name": "Société Immobilière 29",
+        "statusCode": {
+          "key": "OrganisationSituation_1",
+          "code": 1
+        }
+      },
+      "relationType": {
+        "code": 0,
+        "key": "RelationType_1"
+      },
+      "roles": [
+        {
+          "contracts": [
+            {
+              "contractCode": {
+                "key": "ContractCode_1",
+                "code": 2013
+              }
+            }
+          ],
+          "from": "2017-01-29",
+          "to": null
+        }
+      ]
+    }
+  ]
+}

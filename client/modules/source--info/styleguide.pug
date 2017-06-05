@@ -1,0 +1,14 @@
+mixin styleguide-source--info()
+  div#source-info.section
+
+    h2.styleguide-title Source Info
+
+    p Info link to our source page:
+    +source-info(__('SHAB'))
+
+    .section
+
+    p Display within a page title (hidden in Mobile View):
+    .section.section--header.section--source
+      h2=__('Beteiligungen')
+      +source-info-right('AZ Direct')

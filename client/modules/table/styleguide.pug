@@ -1,0 +1,84 @@
+include ./layout
+
+mixin styleguide-table()
+  .section--main
+    h2#tables Tables
+
+    .responsive-table
+      table.section
+        thead
+          tr
+            th Lorem
+            th Ipsum
+            th Dolor
+            th Incessit
+        tbody
+          tr
+            td(rowspan=3): a Sed ut perspiciatis
+            td 01.29.2004
+            td.alt Alternative style
+            td.alt &mdash;
+          tr
+            td 01.29.2003
+            td
+            td.alt &mdash;
+          tr
+            td.alt 2 frühere Funktionen
+
+        tbody.highlighted
+          tr
+            td: a Finibus Bonorum et Malorum
+            td 01.29.2001
+            td.alt omnis iste natus 
+            td.alt
+              .icon-info &mdash;
+
+        tbody
+          tr
+            td At vero eos et accusamus
+            td 01.29.1995
+            td.alt omnis iste natus 
+            td.alt
+              .icon-info &mdash;
+
+        tbody
+          tr
+            td(rowspan=3): a Quis autem vel eum iure reprehenderit consequatur.
+            td &mdash;
+            td
+              .bean.bean-col-0 Omnis iste natus 
+            td.alt
+              .icon-info &mdash;
+          tr
+            td 21.02.2013
+            td
+              .bean.bean-col-1 Voluptatem sequi nesciunt 
+          tr
+            td &mdash;
+            td
+              .bean Voluptas sit aspernatur
+            td
+              .icon-network
+              =" 4"
+
+        tbody
+          tr
+            th Loading
+            td.loading
+
+
+mixin styleguide-pagination()
+  .section--main
+    h2#pagination Pagination
+
+    .section
+      p Pagination is represented by a sequence of links to navigate through search lists, management or mandate lists and participation lists.
+        | The double arrow links will lead respectively to the first and last page, the single arrow links let the user navigate to the previous and next page.
+        | Arrow links will be hidden in the mobile view
+
+    .section
+      +tablePagination()
+
+    .section
+      .center
+        .pagination-text

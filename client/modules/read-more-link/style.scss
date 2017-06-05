@@ -1,0 +1,8 @@
+.read-more-link:after {
+  @extend .icon-linkarrow_blue;
+  content: '';
+  display: inline-block;
+  margin-left:0.25rem;
+  width:0.5rem;
+  height: 0.7rem;
+}

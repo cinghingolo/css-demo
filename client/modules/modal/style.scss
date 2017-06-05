@@ -1,0 +1,136 @@
+@mixin modal-position-mobile(){
+  top:0;
+  left:0;
+  width:100%;
+  min-height: 100%;
+}
+
+.modal {
+  position:fixed;
+  top:25%;
+  left:25%;
+  width:50%;
+  min-height:50%;
+  //transform: translate(-50%, -50%);
+  z-index: 999999;
+  box-sizing: border-box;
+
+  @include breakpoint(tablet) {
+    top:10%;
+    left:10%;
+    width:80%;
+    min-height:80%;
+    @include breakpoint(mobile-landscape){
+      position: absolute;
+      @include modal-position-mobile;
+    }
+  }
+  @include breakpoint(mobile) {
+    @include modal-position-mobile;
+  }
+
+  &.modal-login {
+    width: 70%;
+    top: 15%;
+    left: 15%;
+    @include breakpoint(tablet) {
+      width: 80%;
+      left: 10%;
+      top: 7.5%;
+    }
+    @include breakpoint(mobile) {
+      width: 95%;
+      top: $s-mobile-gutter;
+      left: 2.5%;
+    }
+  }
+}
+
+@mixin modal-close-mobile(){
+  top: 1rem;
+  right: 1rem;
+  color: black;
+}
+
+.modal-close {
+  position:absolute;
+  color: white;
+  top: -3rem;
+  right: -3rem;
+  width:2rem;
+  height:2rem;
+  transform: rotate(45deg);
+  font-size: 2rem;
+  cursor: pointer;
+  text-align:center;
+  line-height: 2rem;
+  @include breakpoint(mobile) {
+    @include modal-close-mobile;
+  }
+  @include breakpoint(mobile-landscape){
+    @include modal-close-mobile;
+  }
+}
+
+@mixin modal-content-mobile(){
+  margin: auto 0;
+  padding: 1rem 2rem;
+}
+
+.modal-content {
+  max-height:100%;
+  max-width: 100%;
+  padding: 3rem;
+  background-color: white;
+  overflow-y:auto;
+  box-sizing: border-box;
+  @include breakpoint(mobile) {
+    @include modal-content-mobile;
+  }
+  @include breakpoint(mobile-landscape){
+    @include modal-content-mobile;
+    .section--small {
+      margin-top: 0;
+    }
+  }
+
+  span.forgotPassword{
+    display: block;
+    padding-top: 1rem;
+    @include breakpoint(mobile-landscape){
+      display: inline-block;
+      padding-left: 1rem;
+    }
+  }
+}
+
+ 
+.modal-overlay {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-color: hsla(0,0%,0%,0.6);
+  z-index:999999;
+}
+
+.modal-footer {
+  max-height:100%;
+  max-width: 100%;
+  padding: 1rem 3rem;
+  background-color: color(gray-2);
+  overflow-y:auto;
+  box-sizing: border-box;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  @include breakpoint(mobile-landscape){
+    width: 100%;
+    padding: 0.5rem 2rem;
+    /*position: absolute;*/
+    bottom:0;
+  }
+}

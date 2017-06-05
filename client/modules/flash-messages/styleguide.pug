@@ -1,0 +1,12 @@
+mixin styleguide-flash-messages()
+  .container
+    .content
+      div#flash-messages.section
+        h2.styleguide-title Flash Messages
+
+        .section
+          p The flash messages are defined as in the Bootstrap Framework. We only changed slightly the colors, using the ones defined above (or derived from them). All the alerts are dismissable.
+
+  .section
+    - messages = { error: [ 'Error message' ], warning: ['Warning message'], info: ['Info message'], success: ['Success!!'] }
+      +flash-messages(messages)

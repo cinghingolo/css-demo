@@ -1,0 +1,9 @@
+include entity-table
+include ../modules/table--entities/layout
+
+- relations = relations ||  data
+- showContent = showContent
+if showContent
+  +entity-table(relations)
+else
+  +emptyEntityTable()

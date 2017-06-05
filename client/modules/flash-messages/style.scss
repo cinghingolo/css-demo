@@ -1,0 +1,41 @@
+.alert {
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+  padding: 15px 0;
+  .close {
+    background: transparent;
+    color: #000;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #fff;
+    border: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.alert-success {
+  @extend .c-bg-green-20p;
+  border-color: color(green);
+  color: mix(black, color(green), 40%);
+}
+.alert-info {
+  @extend .c-bg-extra-light-blue-20p;
+  border-color: color(extra-light-blue);
+  color: mix(black, color(extra-light-blue), 40%);
+}
+.alert-warning {
+  @extend .c-bg-yellow-20p;
+  border-color: color(yellow);
+  color: mix(black, color(yellow), 40%);
+}
+.alert-danger {
+  @extend .c-bg-light-red-20p;
+  border-color: color(light-red);
+  color: mix(black, color(light-red), 40%);
+}

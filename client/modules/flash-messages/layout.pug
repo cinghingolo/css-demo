@@ -1,0 +1,21 @@
+mixin flash-messages(messages)
+  if messages.error
+    each message in messages.error
+      +flash-message(message)&attributes({class: "alert-danger"})
+  if messages.success
+    each message in messages.success
+      +flash-message(message)&attributes({class: "alert-success"})
+  if messages.warning
+    each message in messages.warning
+      +flash-message(message)&attributes({class: "alert-warning"})
+  if messages.info
+    each message in messages.info
+      +flash-message(message)&attributes({class: "alert-info"})
+
+mixin flash-message(message)
+  .alert.alert-dismissible.fade-in(role="alert")&attributes(attributes)
+    .container
+      .content
+        button.close(type="button" data-dismiss="alert" aria-label="Close")
+          span(aria-hidden="true") &times;
+        p.flash-message-content!=__(message)

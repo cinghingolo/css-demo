@@ -1,0 +1,14 @@
+include ../link/layout
+
+mixin dropdown(header)
+  .dropdown-container.minor&attributes(attributes)
+    +dropdown-toggle(header)
+    +dropdown-content()
+      block
+
+mixin dropdown-toggle(header)
+  .dropdown.js-dropdown-toggle=header
+
+mixin dropdown-content()
+  ul.dropdown-options.js-dropdown-options.not-displayed
+    block

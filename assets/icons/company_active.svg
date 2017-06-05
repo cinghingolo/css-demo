@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>company active</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="company-active" sketch:type="MSArtboardGroup">
+            <path d="M13,10 L11,10 L11,8 L13,8 L13,10 Z M13,14 L11,14 L11,12 L13,12 L13,14 Z M13,18 L11,18 L11,16 L13,16 L13,18 Z M9,10 L7,10 L7,8 L9,8 L9,10 Z M9,14 L7,14 L7,12 L9,12 L9,14 Z M9,18 L7,18 L7,16 L9,16 L9,18 Z M22.748,9.678 C22.91,10.428 23,11.203 23,12 C23,17.025 19.61,21.264 15,22.574 L15,9.46 C14.012,8.573 13.321,7.366 13.09,6 L5,6 L5,20.479 C2.559,18.459 1,15.409 1,12 C1,5.935 5.935,1 12,1 C12.797,1 13.573,1.09 14.322,1.252 C14.563,0.951 14.833,0.675 15.126,0.426 C14.128,0.157 13.083,0 12,0 C5.373,0 0,5.372 0,12 C0,18.628 5.373,24 12,24 C18.627,24 24,18.628 24,12 C24,10.917 23.843,9.872 23.574,8.874 C23.325,9.168 23.049,9.437 22.748,9.678 L22.748,9.678 Z" id="Fill-14" fill="#323536" sketch:type="MSShapeGroup"></path>
+            <path d="M18.494,6.66 L16.513,4.679 L17.22,3.972 L18.494,5.246 L21.116,2.623 L21.823,3.33 L18.494,6.66 Z M19,0 C16.239,0 14,2.239 14,5 C14,7.762 16.239,10 19,10 C21.762,10 24,7.762 24,5 C24,2.239 21.762,0 19,0 L19,0 Z" id="Fill-16" fill="#3BC3A1" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

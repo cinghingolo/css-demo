@@ -1,0 +1,389 @@
+body {
+  color: color(gray-7);
+  @extend %paragraph;
+}
+
+a {
+  color: color(light-blue);
+  text-decoration: none;
+  &:hover {
+    color: color(dark-blue);
+  }
+}
+
+a.lighter {
+  color: color(extra-light-blue);
+  &:hover {
+    color: color(blue);
+  }
+}
+
+
+a.no-link {
+  color: inherit;
+}
+
+h1+p, h2+p, h3+p, p+p,
+p+h1, p+h2, p+h3,
+p+ul{ margin-top: 1rem; }
+
+em {font-style: italic;}
+strong {font-weight: bold;}
+
+li {
+    padding: 0.25rem 0;
+}
+ul.dash li{
+  padding: 0.25rem 0 0.25rem 1rem;
+
+  &:before{
+    content: '–';
+    display: inline-block;
+    width:1rem;
+    margin-left:-1rem;
+  }
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid color(gray-4);
+}
+
+table { 
+  width: 100%; 
+}
+
+th, td {
+  padding: 0.25rem 1rem 0.25rem 0;
+  vertical-align: top;
+  &.icon-col {
+    width: 5%;
+  }
+}
+
+th, .key, td.alt{
+  color: color(gray-6);
+  @extend %sublegend;
+}
+
+tbody.highlighted {
+  @extend .c-bg-light-blue-20p;
+}
+
+thead, tbody { border-bottom: 1px solid color(gray-3); }
+thead th , tbody tr:last-of-type td{ padding-bottom: 1rem; }
+tbody tr:first-of-type td{ padding-top: 1rem; }
+
+td.loading:before {color: color(gray-3); content: "\2022\2022\2022";}
+td.empty { color: color(gray-3); text-align: center; }
+
+.no-bars {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar { display:none;}
+  overflow-x: scroll;
+}
+
+.sub-header-nav {
+  @extend .no-bars;
+}
+
+.responsive-table {
+
+  @extend .no-bars;
+
+  @include breakpoint(tablet){
+    & th {
+      white-space:nowrap;
+    }
+  }
+}
+
+input[type=text]
+,input[type=email]
+,input[type=password]
+,textarea {
+  appearance: none; // Override default inner shadow on iOS
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 1rem;
+  padding: 0.5rem;
+
+  border: 1px solid color(gray-4);
+  border-radius: 0.2rem;
+  margin: 0.5rem 0;
+
+  outline: none; // Resets generic browser outline.
+
+  &:hover {
+    border: 1px solid color(gray-5);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity:0.8;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid color(light-blue);
+  }
+
+  &.error {
+    border: 1px solid color(light-red);
+  }
+
+
+
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder,
+::placeholder{
+  color: red;
+  opacity: 1;
+}
+
+input[type=radio], .radio {
+  display:none;
+
+  & + label {
+    display:inline-block;
+    background-color: color(gray-2);
+    padding:0.5rem 1rem;
+    cursor:pointer;
+    border: 1px solid color(gray-4);
+    /*margin-left: -1px;*/
+    position: relative;
+    box-sizing: border-box;
+
+    &.round-left {
+      border-radius: 0.2rem 0 0 0.2rem;
+    }
+    &.round-right {
+      border-radius: 0 0.2rem 0.2rem 0;
+    }
+    &.round-label{
+      border-radius: 0.2rem;
+    }
+
+    &:hover {
+      border: 1px solid color(gray-6);
+      color: color(gray-7);
+      z-index:2;
+    }
+  }
+
+  &:checked + label, & + label:active {
+    @extend .c-bg-light-blue-20p;
+    border: 1px solid color(gray-6);
+    color: color(gray-7);
+    z-index:2;
+  }
+}
+
+// Firefox doesn't do radio styling:
+// https://bugzilla.mozilla.org/show_bug.cgi?id=605985
+// -> reset to default styles
+@-moz-document url-prefix() {
+  input[type=radio], .radio {
+    -moz-appearance: radio;
+  }
+}
+
+select::-ms-expand {
+  border: none;
+  color: color(gray-6);
+  display: none;
+}
+
+select {
+  appearance: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid color(gray-4);
+  background-color: color(gray-2);
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+  @extend %sublegend;
+
+  background-image: url(../../assets/images/select-arrow-gray.svg);
+  background-repeat:no-repeat;
+  background-position:right;
+  padding-right: 2rem;
+
+  &:focus {
+    outline:0;
+    border-color: color(gray-6);
+  }
+  &:hover {
+    border: 1px solid color(gray-5);
+  }
+}
+
+.footer-bottom select {
+  background-image: url(../../assets/images/select-arrow.svg);
+}
+
+
+
+
+label {
+  @extend %sublegend;
+  color: color(gray-6);
+}
+
+.error-text {
+  @extend %sublegend;
+  color: color(light-red);
+}
+
+.key {
+  margin-top: 1rem;
+}
+.key--nomargin {
+  color: color(gray-6);
+  @extend %sublegend;
+}
+
+.table {
+  display: table;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+// Shadows
+$b-box-shadow: 0px 2px 4px 0px color(gray-4);
+$b-box-shadow-opac: 0px 2px 4px 0px hsla(0,0%,0%,0.23); //Calc $c-gray-4 from black
+
+.shadow, %shadow {
+  border: 1px solid color(gray-4);
+  box-shadow: $b-box-shadow-opac;
+}
+
+.shadow.shadow--stackable {
+  // For shadows that may stack, use an opaque color instead.
+  box-shadow: $b-box-shadow;
+}
+
+
+
+.shadow--static.shadow--static { // Override specificity of default shadow
+  border: 1px solid color(gray-4);
+  border-bottom:2px solid color(gray-4);
+}
+
+.minor {
+  @extend %sublegend;
+  color: color(gray-5);
+}
+
+.hidden {
+  visibility: hidden;
+}
+.not-displayed {
+  display: none;
+}
+
+.section--bordered {
+  border-bottom: 1px solid color(gray-4);
+  padding-bottom:1rem;
+
+  &.no-padding {
+    padding-bottom: 0;
+  }
+}
+
+.bean {
+  display: inline-block;
+  @extend .t-sublegend;
+  background-color: color(gray-2);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap
+}
+
+.help-bean {
+  @extend .bean;
+  padding: 0.1rem 0.45rem;
+  border-radius: 1rem;
+  border: 2px solid color(white);
+  position: relative;
+  top: -0.2rem;
+  left: -0.2rem;
+  cursor: pointer;
+}
+
+.bean.bean-col-contract { @extend .c-bg-light-blue-20p;}
+.bean.bean-col-signature { @extend .c-bg-gray-2;}
+.bean.bean-col-searchhits {
+  background-color: color(blue);
+  color: color(white)
+}
+
+.no-wrap {
+  display:inline;
+  white-space: nowrap;
+}
+
+@mixin tile($radius){
+  width: $radius;
+  height: $radius;
+  @include tile-content($radius)
+}
+
+/*
+   Calculation of inner square
+   r = circle radius
+   a = r * sqrt(2) / 2 = width/height of inner square
+*/
+@mixin tile-content($radius){
+  $size: $radius * 1.41 / 2;
+  .tile-content {
+    width: $size;
+    height: $size;
+  }
+}
+
+.tile {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  // r=5rem
+  &.tile-s {
+    @include tile(10rem)
+  }
+  // r=10rem
+  &.tile-m {
+    @include tile(20rem)
+  }
+  &.tile-l {
+    @include tile(30rem)
+  }
+  &.tile-circular {
+    background: url(../../assets/images/background_circle.svg);
+    -webkit-background-size: 100%;
+    background-size: 100%;
+  }
+
+  .tile-content {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.fixed-height-28 {
+  min-height: 28.5rem;
+}

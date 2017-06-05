@@ -1,0 +1,45 @@
+include ../link/layout
+include ../modal/layout
+include ../button/layout
+
+mixin login-link(opts)
+  - opts = opts || {}
+  - opts.text = opts.text || __('Login')
+  - opts.redirect = opts.redirect || urlObj.href
+  - classes = attributes.class ? attributes.class.split(' ') : []
+  +link()&attributes({'data-modal-id': 'login-modal', 'class': attributes.class, 'data-redirect-uri': opts.redirect}).js-trigger-modal.js-auto-redirect.gray=opts.text
+
+mixin logout-link(opts)
+  - opts = opts || {}
+  - opts.text = opts && opts.text || __('Logout')
+  a(href='/logout')&attributes({'class': attributes.class})=opts.text
+
+mixin login-modal-footer-entry(text)
+  .small-icon-before
+    .small-icon.icon-tick
+    .l-grid
+      .l-grid-cell.l-one-whole
+        span=__(text)
+
+mixin login-modal()
+  //- login modal is globally needed when token expires
+  +modal('login-modal')&attributes({'event-modal-open': 'login-modal:open', 'event-modal-close': 'login-modal:close'}).modal-login
+    .modal-content
+      h2=__('Jetzt einloggen')
+      div#errorMessages
+        #unauthorized.error-text=__('Benutzername oder Passwort falsch')
+        #accountBlocked.error-text !{__('Ihr Konto wurde deaktiviert.')}
+
+      .section--small
+        form(action=('/login') method='POST' id='login-form' data-target='#errorTarget')
+          label=__('Email Adresse')
+          input(name='username' type='email', placeholder=__('Email Adresse'))
+          label=__('Passwort')
+          input(name='password' type='password', placeholder=__('Passwort'))
+          .section--small
+            input(value=__('Einloggen'), type='submit').button
+            span.forgotPassword
+              +link()=__('Passwort vergessen') + '?'
+
+    .modal-footer.not-displayed
+      +button--register(user, {href: 'https://css.ch/register', text:__('Jetzt kostenlos registrieren')})#register-link.button--secondary

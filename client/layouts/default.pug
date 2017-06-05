@@ -1,0 +1,52 @@
+include ../modules/login/layout
+include ../modules/header/layout
+include ../modules/flash-messages/layout
+
+doctype html
+
+html(lang=getLocale())
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    meta(name='format-detection', content='telephone=no')
+
+    link(rel='stylesheet', href='/css/' + stylesCSS )
+
+    block meta
+      title=__("CSS Demo")
+      meta(name="description" content=__("Mit über 1 Millionen Künden..."))
+    block meta-robots
+      meta(name='robots', content='noindex, nofollow')
+
+    link(rel="icon" type="image/png" href="/assets/favicons/favicon.ico")
+    meta(name="theme-color" content="#ffffff")
+
+  body
+    block body-header
+      +header-account()
+    block body
+
+    +login-modal()
+
+    .hidden.interaction-elements.js-interaction-elements
+      - tooltipContents = tooltipContents || []
+      for tooltipContent in tooltipContents
+        +tooltip-target(tooltipContent)
+
+      - modalContents = modalContents || []
+      for modalContent in modalContents
+        +modal-target(modalContent)
+
+
+    script(type='application/json' id='mh_user')!= user.toBrowserJSON()
+    script(type='application/json' id='i18n-strings')!= JSON.stringify(browserI18nStrings)
+
+    script(src='/js/vendor.min.js')
+    script(src='/js/' + mainJs)
+
+    #is-desktop-view.is-visible-desktop
+
+    #flash-message-template.not-displayed
+      +flash-message('')

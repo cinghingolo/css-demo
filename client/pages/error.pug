@@ -1,0 +1,23 @@
+extends ../layouts/default
+
+include ../modules/header/layout
+
+block body
+  .container
+    .full-width-image
+      .error-page
+        .message
+          h1=__('Error!')
+          if error && error.statusCode == 404
+            p.section=__('Wir konnten die von Ihnen gesuchte Seite leider nicht finden.')
+          else
+            p.section=__(error && error.statusCode ? error.statusCode : 'Internal Error 500')
+            p.section.not-displayed=error && error.message
+
+          .section--large.center
+            .l-one-half.l-one-half.l-tablet-one-whole.center-block
+
+          nav.section.error-links.l-grid
+            .l-one-whole.l-grid-cell.section--content
+              +link('/') !{__('Startseite')}
+

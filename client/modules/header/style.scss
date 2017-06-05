@@ -1,0 +1,212 @@
+.header {
+  .narrow-nav {
+    display: none;
+    position: relative;
+  }
+
+  &.search-nav {
+    a {
+      color: white;
+      padding: 1rem 0.75rem;
+      display: inline-block;
+      border-bottom: 3px solid color(blue-black);
+      &.active, &:hover {
+        border-bottom: 3px solid color(blue);
+      }
+    }
+  }
+
+  @include breakpoint(mobile){
+    position:relative;
+    height:2.2rem;
+
+    .narrow-nav {
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9;
+      background-color: color(gray-2);
+      border-bottom: 1px solid color(gray-3);
+
+      .logo-container {
+        float: left;
+      }
+
+      .menu-container {
+        float: right;
+        position: relative;
+        right: 1rem;
+      }
+
+      .menu {
+        width: 2rem;
+        height: 2rem;
+        margin: 1rem 0rem;
+      }
+    }
+  }
+}
+
+.narrow-nav-logo {
+  height: 2.5rem;
+  padding:0.75rem 0rem 0rem 1rem;
+}
+
+.narrow-nav-inner {
+  padding: 1rem;
+  li {
+    padding: 0;
+  }
+}
+
+.narrow-nav-menu {
+  display:none;
+  position: fixed;
+  overflow-y:scroll;
+  top: 2rem;
+  width:100%;
+  height:100vh;
+  background-color: color(gray-2);
+  z-index:9;
+  border-bottom: 1px solid color(gray-3); 
+  
+  a { // Make links big click targets
+    display: block;
+    padding:0.75rem;
+    font-size:1.1rem;
+    &.nolink {
+      color: color(gray-5);
+    }
+  }
+}
+
+
+.header__logo {
+  padding: 1rem 0;
+  display:block;
+  
+
+  &__img {
+    vertical-align: middle;
+    height: 72px;// Logo
+    display: block;
+  }
+}
+
+.header__account__nav {
+  padding: 1rem 0;
+  line-height: 72px;
+  float: right;
+  text-align: right;
+
+  @include breakpoint(tablet) {
+    height: 100px;
+  }
+  @include breakpoint(only-tablet) {
+    height: unset;
+  }
+
+  .service-link-block {
+    display: inline-block;
+    @include breakpoint(tablet) {
+      position: absolute;
+      top: 50px;
+      right: 1rem;
+    }
+    @include breakpoint(only-tablet) {
+      position: unset;
+      top: 0;
+      right: unset;
+    }
+  }
+
+  & a {
+    &.gray {
+      color: color(gray-5);
+      font-size: 0.875rem;
+    }
+
+    &.button {
+      &:after {
+        padding: 1rem 0;
+      }
+    }
+    &.service {
+      margin-right: 0.5rem;
+      &:after {
+        content: '|';
+        padding-left: 0.5rem;
+      }
+      &.no-after:after {
+        content: '';
+      }
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__notifications {
+  position: relative;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  overflow: visible;
+
+  & .count {
+    position:absolute;
+    top:-0.3rem;
+    right:-0.3rem;
+    width:1rem;
+    height:1rem;
+    border-radius:0.5rem;
+    text-indent:0;
+    font-size:0.8rem;
+    vertical-align:middle;
+    text-align:center;
+    background-color: color(gray-5);
+    color: white;
+  
+  }
+}
+
+form.form--blue{
+  background-color: mix(white, color(blue-black), 20%);
+}
+
+.top-nav {
+  background-color: white;
+
+  .top-nav-item {
+    @extend .l-grid-cell;
+    margin-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    &.last{
+      margin-right: 0;
+    }
+  }
+}
+
+.language-radiogroup {
+  height: 92px;
+}
+
+// Overwrite sensible grid rules for language radiogroup
+.l-grid {
+  &.language-radiogroup-mobile {
+    .l-grid-cell {
+      font-size: 0;
+      &.language-item {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.full-width-image {
+  background:color(light-blue);
+  color: white;
+  text-align:center;
+}

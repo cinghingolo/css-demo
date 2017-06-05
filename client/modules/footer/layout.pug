@@ -1,0 +1,16 @@
+include ../link/layout
+include ../button--register/layout
+
+mixin footer()
+  .footer-bottom
+    .container
+      .content
+        .content-footer-bottom
+          .l-grid
+            .l-grid-cell.l-one-half.l-tablet-one-whole.section
+              span.copyright Copyright &copy; #{moment().format('YYYY')} CSS Versicherung
+            .l-grid-cell.l-one-half.l-tablet-one-whole.section
+              +link() #{__('AGB')} |&nbsp;
+              +link() #{__('Nutzungsbedingungen')} |&nbsp;
+              +link() #{__('Datenschutz')} |&nbsp;
+              +link() #{__('Impressum')}

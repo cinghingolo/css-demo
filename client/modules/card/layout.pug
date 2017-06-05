@@ -1,0 +1,19 @@
+include ../read-more-link/layout
+
+mixin card--image(opts)
+  - classes = ['card', 'card-image-container', 'l-grid-cell', 'l-one-third', 'l-mobile-one-whole', 'l-tablet-one-half', 'section--content']
+  - if (opts.noborder) { classes.push('card--no-border') } else { classes.push('shadow--static') }
+  - if (opts.card_link) { classes.push('js-fake-link') }
+
+  div(class=classes, href=createUrl(opts.card_link))
+    .card-image-block
+      img(src='/assets/images/' + opts.image + '.jpg').card-image-img
+      .card-image-icon
+        if opts.icon
+          img(src='/assets/icons/' + opts.icon + '.svg').huge-icon
+      h2(class=opts.icon ? 'card-image-title section--content' : 'card-image-title--no-icon')=opts.title
+
+    .section--content
+      block
+      .section--content
+        +read-more-link(opts.card_link) Mehr erfahren

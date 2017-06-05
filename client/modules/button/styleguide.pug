@@ -1,0 +1,66 @@
+mixin styleguide-buttons
+  div#buttons.section
+    h2.styleguide-title Buttons
+    table.styleguide-table
+      tr
+        th Type
+        th Default
+        th Disabled
+
+      tr
+        td Primary / Blue / Big
+        td
+          +button({text: 'Unternehmen folgen'})
+        td
+          +button({text: 'Unternehmen folgen'}).button--disabled
+
+      tr
+        td Secondary / Blue / Big
+        td
+          +button({text: 'Unternehmen folgen'}).button--secondary
+        td
+          +button({text: 'Unternehmen folgen'}).button--secondary.button--disabled
+
+      tr
+        td Primary / Orange / Big
+        td
+          +button({text: 'Unternehmen folgen'}).button--orange
+        td
+          +button({text: 'Unternehmen folgen'}).button--orange.button--disabled
+
+      tr
+        td Secondary / Orange / Big
+        td
+          +button({text: 'Unternehmen folgen'}).button--secondary.button--orange
+        td
+          +button({text: 'Unternehmen folgen'}).button--secondary.button--orange.button--disabled
+
+
+      tr
+        td Primary / Blue / Small
+        td
+          +button({text: 'Unternehmen folgen'}).button--small
+        td
+          +button({text: 'Unternehmen folgen'}).button--small.button--disabled
+
+      tr
+        td Secondary / Blue / Small
+        td
+          +button({text: 'Unternehmen folgen'}).button--secondary.button--small
+        td
+          +button({text: 'Unternehmen folgen'}).button--secondary.button--small.button--disabled
+
+      tr
+        td Primary / Blue / 2-Line
+        td
+          +button({text: '24.50 kaufen', minorText: 'Mit Professional Abo ab CHF'})
+        td
+          +button({text: '24.50 kaufen', minorText: 'Mit Professional Abo ab CHF'}).button--disabled
+
+      tr
+        td Secondary / Blue / 2-Line
+        td
+          +button({text: '24.50 kaufen', minorText: 'Einzelabfrage ohne Abo:'}).button--secondary.button--small
+        td
+          +button({text: '24.50 kaufen', minorText: 'Einzelabfrage ohne Abo:'}).button--secondary.button--disabled
+

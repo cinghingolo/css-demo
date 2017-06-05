@@ -1,0 +1,37 @@
+$colors: (
+  white: #FFFFFF,
+  extra-light-blue: #7AB3F5,
+  light-blue: #00ABf5, //use
+  blue: #1177BB, //use
+  dark-blue: #00216F, //use
+  blue-black: #23344c,
+  light-red: #f9654f,
+  red: #EB3d2c,
+  dark-red: #CB2014,
+  purple: #7c79c9,
+  turquoise: #36a7b2,
+  green: #3bc3a1,
+  yellow: #F8B546,
+  gray-1: #f4f6f6,
+  gray-2: #ebeeef,
+  gray-3: #d8dee0,
+  gray-4: #c4ced1,
+  gray-5: #909799,
+  gray-6: #72787a,
+  gray-7: #323536
+);
+
+@each $i, $c in $colors {
+  .c-#{$i}{ color: color($i); }
+  .c-#{$i}-20p { color: mix(white, color($i), 80%); }
+  .c-bg-#{$i}{ background-color: color($i); }
+  .c-bg-#{$i}-20p{ background-color: mix(white, color($i), 80%);}
+}
+
+.on-dark {
+  @extend .c-bg-blue-black;
+  color: white;
+}
+
+
+

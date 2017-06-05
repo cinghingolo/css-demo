@@ -1,0 +1,18 @@
+include ../button/layout
+
+mixin button--register(user, opts)
+  - var classes = [].concat(attributes.class || [])
+  - if (!user.isGuest() && !user.isPremium()) classes.push('button--orange')
+  - opts = opts || {};
+  - opts.text = opts.text || (user.isGuest() ? __('Kostenlos registrieren') : __('Jetzt Premium-Mitglied werden'))
+  - opts.href = opts.href || (user.isGuest() ? 'http://css.ch/register' : '/membership')
+
+  if opts.refKey
+    - opts.href += '?ref=' + opts.refKey
+
+  if user.isGuest() || !user.isPremium()
+    - var attr = {external: true, class: classes}
+    if attributes.id
+      - attr.id = attributes.id
+
+    +button(opts)&attributes(attr)

@@ -1,0 +1,17 @@
+// Fix a bug where sensible has the wrong specificity for mobile/hidden
+@include breakpoint(mobile){
+  .is-visible-mobile.is-visible-mobile {
+    display: block !important;
+    visibility:visible;
+  }
+}
+
+// CMS Hack
+.js-fake-link {
+  cursor: pointer;
+}
+
+// IE11 (and maybe valid for others IE versions) input hack
+.search-submit {
+  text-indent: -999px;
+}

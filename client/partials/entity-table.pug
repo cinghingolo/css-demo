@@ -1,0 +1,12 @@
+include ../modules/table--entities/layout
+
+mixin entity-table(relations)
+  if typeof(showContent) == 'undefined'
+    - var showContent = !showPaywall
+  //- the check for typeof(showContent) is required because it is not set when rendering from partial 'entity-table-partial'!
+  if !showContent
+    //- render empty table without any rows if paywall is shown
+    +emptyEntityTable(relations)
+  else
+    //- render table with a placeholder row if there are no relations
+    +entityTable(relations)

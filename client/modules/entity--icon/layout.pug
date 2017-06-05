@@ -1,0 +1,36 @@
+mixin company--icon(company, opts)
+  - var iconClass = 'icon-company_'
+  //- attribute name is different depending on origin
+  - var status = company.status || company.statusCode
+  case status.code
+    when 1
+      - iconClass += 'active'
+    when 3
+      - iconClass += 'liquidation'
+    when 5
+      - iconClass += 'inactive'
+    //- unknonwn: show no logo
+    default
+      - iconClass = ''
+
+  +entity--icon(iconClass, opts)
+
+mixin person--icon(person, opts)
+  - var iconClass = 'icon-person_'
+    //- old way: use statusCode
+  if person.activeMandate === undefined
+    - iconClass = 'icon-person_active'
+    //- new way: use `activeMandate` flag
+  else
+    if person.activeMandate
+      - iconClass += 'active'
+    else
+      - iconClass += 'inactive'
+  +entity--icon(iconClass, opts)
+
+mixin entity--icon(iconClass, opts)
+  //- 1 = active, 3 = in liquidation, 5 = deleted
+  - var classes = [].concat(attributes.class)
+  - classes.push(iconClass)
+  - if (opts && opts.inline) classes.push('med-inline-icon', 'icon--mid')
+  div(class=classes)
